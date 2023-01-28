@@ -14,9 +14,8 @@ class Inferrer:
         image = preprocess_input(image)
         # Converts the image to a tensor
         image = tf.convert_to_tensor(image, dtype=tf.float32)
-        
         # Gets the prediction)
-        prediction = self.predict(image)['dense_8']
+        prediction = self.predict(image)['dense_2']
         # Gets the prediction
         prediction = prediction.numpy()
         # Get highest element in prediction

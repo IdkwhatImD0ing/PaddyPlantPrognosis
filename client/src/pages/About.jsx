@@ -12,7 +12,24 @@ const About = () => {
       gmail: "dung.n.nguyen@sjsu.edu",
       photo: ava,
     },
-  ]  
+    {
+      name: "Trique Nguyen",
+      linkedin: "https://www.linkedin.com/in/trique-nguyen/",
+      github: "https://github.com/triquenguyen",
+      info: "B.S. in Software Engineering at San Jose State University",
+      gmail: "dung.n.nguyen@sjsu.edu",
+      photo: ava,
+    },
+    {
+      name: "Trique Nguyen",
+      linkedin: "https://www.linkedin.com/in/trique-nguyen/",
+      github: "https://github.com/triquenguyen",
+      info: "B.S. in Software Engineering at San Jose State University",
+      gmail: "dung.n.nguyen@sjsu.edu",
+      photo: ava,
+    },
+  ]
+
   return (
     <div>
         <h1 className="py-8 text-center text-[48px]">About Us</h1>
@@ -22,9 +39,9 @@ const About = () => {
           <h2 className='text-[24px]'>Meet Our Contributors</h2>
           <p className='pt-2'>We are thriving students with passionate in developing tools to help the world!</p>
           <div>
-            {contacts.map(contact => {
-              <Contributor photo={contact.photo} name={contact.name} linkedin={contact.linkedin} github={contact.github} info={contact.info} gmail={contact.gmail} />
-            })}
+            {contacts.map((contact, index) => (
+              <Contributor key={index} photo={contact.photo} name={contact.name} linkedin={contact.linkedin} github={contact.github} info={contact.info} gmail={contact.gmail} />
+            ))}
           </div>
           
         </div>

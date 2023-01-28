@@ -81,5 +81,67 @@
       "Avoid over-watering or flooding the field."
     ],
     "cause": "It develops in rice fields that are under high nitrogen fertilization and high temperature. It develops in rice fields that are under high nitrogen fertilization and high temperature."
+  },
+  "6": {
+    "name": "Downy Mildew",
+    "scientific_name": "Peronosclerospora philippinensis",
+    "symptoms": "Downy mildew causes light green to yellow angular spots on the upper surfaces of leaves. The white fluffy growth of the pathogen develops on the lower sides of these spots. With time these lesions turn brown and dry up. Older leaves are attacked first. Severely infected leaves may die. On rare occasions the pathogen can become systemic, causing dark discoloration of stem tissue. \n If downy mildew infects the cotyledons of young seedlings, the plants can die. Greenhouse-grown lettuce transplants can also be infected.",
+    "prevention": [
+      "Plant resistant varieties: Planting rice varieties that are resistant to downy mildew can help reduce the risk of infection",
+      "Crop rotation: Rotating crops can help reduce the buildup of the fungus in the soil and reduce the risk of infection",
+      "Fungicides: Applying appropriate fungicides can help control the fungus and prevent the spread of the disease",
+      "Proper irrigation: Irrigating rice fields in the morning can help reduce the humidity and moisture that the fungus needs to thrive",
+      "Proper fertility management: Proper fertility management, such as maintaining adequate levels of nitrogen, can help keep the rice plants healthy and reduce the risk of infection",
+      "Field sanitation: Cleaning up and removing infected plant material can help reduce the amount of fungus present in the field and reduce the risk of infection",
+      "Monitoring: regularly monitoring the fields for symptoms of downy mildew and taking appropriate action if the disease is found"
+    ],
+    "cause": "Downy mildew is caused by the fungus Peronosclerospora philippinensis, thrives in warm and humid conditions, and can infect rice plants at any growth stage. The fungus can spread easily through contaminated seed, soil, water, and infected plant debris, and can survive on crop debris and volunteer plants. High humidity and rainfall, high nitrogen fertilization, drought stress, and high temperature can also contribute to the susceptibility of the plant to the disease."
+  },
+  "7": {
+    "name": "Hispa",
+    "scientific_name": "Dicladispa armigera",
+    "symptoms": "Symptoms of the disease include: \n Scraping of the upper surface of the leaf blade leaving only the lower epidermis as white streaks parallel to the midrib \n Tunneling of larvae through leaf tissue causes irregular translucent white patches that are parallel to the leaf veins \n Damaged leaves wither off \n Rice field appears burnt when severely infested",
+    "prevention": [
+      "Avoid over fertilizing the field",
+      "Close plant spacing results in greater leaf densities that can tolerate higher hispa numbers",
+      "Leaf tip containing blotch mines should be destroyed",
+      "Manual collection and killing of beetles – hand nets",
+      "To prevent egg laying of the pests, the shoot tips can be cut",
+      "Clipping and burying shoots in the mud can reduce grub populations by 75 - 92%",
+      "Reduviid bug eats upon the adults",
+      "Spraying of methyl parathion 0.05% or Quinalphos 0.05%"
+    ],
+    "cause": "Rice Hispa is caused by the insect Scirpophaga incertulas, which is a small, slender, and yellowish-white worm that feeds on the stem and leaves of the rice plant, primarily attacking the young plants during the vegetative stage. It's considered a major pest, as it can cause significant yield loss and even complete crop failure in some cases."
+  },
+  "8": {
+    "name": "Tungro",
+    "scientific_name": "Viruses: Tospovirus genus and Bacilliformvirus genus",
+    "symptoms": "The symptoms of tungro rice disease include yellowing of leaves, stunted growth, reduced yield, rolling of leaves, small and empty grains, leaf sheath rot, and plant death in some severe cases.",
+    "prevention": [
+      "Plant rice varieties that are resistant to the viruses",
+      "Use insecticides, natural predators, or sticky traps to control the vector",
+      "Tungro can survive in the soil for long periods, so rotating rice with other crops can reduce the risk of infection.",
+      "Remove and destroy infected plants and weeds, as they may harbor the viruses that cause Tungro",
+      "Regularly monitoring the crop for the presence of Tungro symptoms, and taking control measures as soon as the disease is detected",
+      "Using a combination of the above methods in an integrated approach, known as Integrated Pest Management (IPM), can be the most effective way to prevent Tungro"
+    ],
+    "cause": "Tungro is a rice disease caused by two different viruses, the Rice tungro spherical virus (RTSV) and the Rice tungro bacilliform virus (RTBV). The scientific name for RTSV is Tospovirus genus and for RTBV is Bacilliformvirus genus. Both of these viruses are transmitted by the small brown planthopper (Laodelphax striatellus) and are considered to be the most serious rice diseases in Asia."
+  },
+  "9": {
+    "name": "Normal",
+    "scientific_name": null,
+    "symptoms": "A normal and healthy rice plant has strong stem, green leaves, healthy roots, abundant tillers, full panicles, plump grains, good growth rate, and no signs of insect damage or disease.",
+    "prevention": [
+      "Selecting the right variety: Choose a rice variety that is well-suited to the local growing conditions and is resistant to common diseases and pests",
+      "Preparing the soil: The soil should be well-drained and have a pH between 6 and 7. Rice can be grown in flooded paddy fields or in upland fields that are irrigated",
+      "Proper planting: Plant the rice seedlings at the correct time and at the correct spacing, to ensure optimal growth and yield",
+      "Proper irrigation: Rice requires a consistent water supply, either through flooding or irrigation. The water level should be managed properly to prevent waterlogging, which can lead to disease and reduced yield",
+      "Fertilization: Rice requires a steady supply of nutrients, such as nitrogen, phosphorous, and potassium. The appropriate amount of fertilizer should be applied at the right time, taking into consideration the soil type and the stage of growth",
+      "Pest and disease management: Regularly monitoring the crop for signs of pests and diseases, and taking appropriate control measures when necessary",
+      "Harvesting: Harvest the rice at the correct time, when the grains have reached maturity and have the highest quality",
+      "Post-harvest management: Properly dry, store, and thresh the rice to maintain its quality",
+      "Crop rotation: Alternate rice with other crops to help maintain soil fertility and reduce pest and disease pressure"
+    ],
+    "cause": "It's important to note that growing healthy rice paddy is a continuous process, and farmers should continuously adapt their management strategies based on the local conditions, weather and other factors."
   }
 }

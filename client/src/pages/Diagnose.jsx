@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react';
 
-import axios from 'axios'
+import axios from 'axios';
 
 const Diagnose = () => {
   // STATES
   const [select, setSelect] = useState('none'); // State for the sample image select value
   const [image, setImage] = useState(null); // State for user uploaded image
   const [imageData, setImageData] = useState(null); // State for user uploaded image
+  const [loading, setLoading] = useState(false); // State for loading
+  const [prediction, setPrediction] = useState(null); // State for prediction
 
   // EFFECTS
   useEffect(() => {
@@ -32,13 +34,41 @@ const Diagnose = () => {
   // FUNCTIONS
 
   // Sends a POST request to the server
-  const handleSubmit = (e) => { 
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // still working on it LOL
-  }
+    const data = imageData.data;
+    const length = imageData.height;
+    const width = imageData.width;
+    const imageArray = new Array(length);
+    for (let i = 0; i < length; i++) {
+      imageArray[i] = new Array(width);
+      for (let j = 0; j < width; j++) {
+        const red = data[(i * width + j) * 4];
+        const green = data[(i * width + j) * 4 + 1];
+        const blue = data[(i * width + j) * 4 + 2];
+        imageArray[i][j] = [red, green, blue];
+      }
+    }
+    setLoading(true);
+    fetch('https://paddydoctor.hop.sh/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(imageArray),
+    })
+      .then(
+        (response) => response.json(), // if the response is a JSON object
+      )
+      .then((data) => {
+        setLoading(false);
+        setPrediction(data);
+        console.log(data);
+      });
+  };
 
   // Updates the image state every time the select input changes
-  const updateSelect = (e) => { 
+  const updateSelect = (e) => {
     setSelect(e.target.value);
 
     const img = new Image();
@@ -66,20 +96,35 @@ const Diagnose = () => {
       // Resize the image to 300x300
       setImage(e.target.files[0]);
     }
-  }
-  
+  };
+
   return (
     <div className="flex justify-center text-[#2c302e]">
-      <form onSubmit={(e) => handleSubmit(e)} action="POST"  className="flex flex-col justify-center mt-[5rem] w-[100rem] px-8">
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        action="POST"
+        className="flex flex-col justify-center mt-[5rem] w-[100rem] px-8"
+      >
         <h1 className="text-[32px] font-medium">Diagnose</h1>
         <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
-          This feature allows users to upload images of their paddy plants and uses <span className="font-bold">image recognition technology</span> to detect any signs of disease. 
-          It then provides a diagnosis of the disease along with recommended treatment options. 
-          This feature is designed to assist farmers in identifying and addressing potential issues with their crops quickly and efficiently.
+          This feature allows users to upload images of their paddy plants and
+          uses <span className="font-bold">image recognition technology</span>{' '}
+          to detect any signs of disease. It then provides a diagnosis of the
+          disease along with recommended treatment options. This feature is
+          designed to assist farmers in identifying and addressing potential
+          issues with their crops quickly and efficiently.
         </p>
-        <p className="text-[16px] mt-10">Upload an image or choose one of our demo images below!</p>
+        <p className="text-[16px] mt-10">
+          Upload an image or choose one of our demo images below!
+        </p>
 
-        <select onChange={(e) => updateSelect(e)} value={select} className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center " ame="paddies" id="paddies">
+        <select
+          onChange={(e) => updateSelect(e)}
+          value={select}
+          className="mt-6 bg-white border px-4 py-2 w-[4.5rem] rounded-md text-center "
+          ame="paddies"
+          id="paddies"
+        >
           <option value="none" selected disabled hidden></option>
           <option value="1">Bacterial Leaf Blight</option>
           <option value="2">Bacterial Leaf Streak</option>
@@ -92,19 +137,30 @@ const Diagnose = () => {
           <option value="9">Normal</option>
           <option value="10">Tungro</option>
         </select>
-        <input 
-          onChange={(e) => updateUserImage(e)} 
-          type="file" 
-          name="userImage" 
-          id="userImage" 
+        <input
+          onChange={(e) => updateUserImage(e)}
+          type="file"
+          name="userImage"
+          id="userImage"
           className="mt-6 block w-full text-sm text-[#666e75] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2c302e] file:text-[#9ae19f] hover:file:bg-[#3b5449]"
         />
-        {image && <img src={URL.createObjectURL(image)} alt="image" className="w-[20rem] mt-6 rounded-xl" />}
-        
-        <button type="submit" className="mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md">Upload</button>
+        {image && (
+          <img
+            src={URL.createObjectURL(image)}
+            alt="image"
+            className="w-[20rem] mt-6 rounded-xl"
+          />
+        )}
+
+        <button
+          type="submit"
+          className="mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
+        >
+          Upload
+        </button>
       </form>
     </div>
-  )
-}
+  );
+};
 
 export default Diagnose;

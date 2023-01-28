@@ -40,5 +40,46 @@
       "Report any symptoms or suspected cases to the authorities immediately."
     ],
     "cause": "Bacterial panicle blight can survive as a surface non pathogenic population on rice leaves and sheaths. These bacterial colonies can spread upwards as the plant grows. Bacteria infect the developing grains at flowering and cause grain abortion or rotting during grain filling after pollination. Susceptibility to infection falls about six days after flowering. Bacterial panicle blight tends to develop in circular patterns in the field. The pattern is exaggerated because the most severely infected panicles in the centre of a patch remain upright due to sterility (Figure 4). Bacterial panicle blight is associated with extended hot and dry summer weather conditions. Prevalence increases when daytime temperatures are above 32oC and night time temperatures remain 25oC or above. High nitrogen levels contribute to disease development."
+  },
+  "3": {
+    "name": "Blast",
+    "scientific_name": "Magnaporthe oryzae",
+    "symptoms": "The symptoms of rice blast include lesions on all parts of the plant, including leaves (diamond shaped lesions are most diagnostic), leaf collars, necks, panicles, pedicels, and seeds. Lesions on leaves may vary based on environmental conditions, the age of the plant, and the levels of resistance of the host cultivars. Collar infections can cause necrosis at the union of the leaf and stem sheath, potentially killing the entire leaf. Neck infections can lead to failure of the seeds to fill or cause the entire panicle to fall over. The fungus can also infect the panicles as the seeds form, causing gray-brown discolorations and potentially breaking the branches. The fungus can also infect seeds, causing brown spots, blotches, and occasionally diamond-shaped lesions. Seed infection primarily occurs by infecting the florets as they mature into seeds.",
+    "prevention": [
+      "Using resistant rice cultivars: this is the most effective way to prevent rice blast",
+      "Proper field management: such as crop rotation, avoiding planting rice in fields where the fungus is known to be present, and good sanitation practices can help to reduce the incidence of the disease.",
+      "Fungicide application: Fungicides can be applied as a preventive measure, but this is not always practical or cost-effective.",
+      "Monitoring weather conditions: Rice blast can occur in periods of high humidity and prolonged leaf wetness, so monitoring weather conditions can help to predict when the disease is most likely to occur and take preventative measures.",
+      "Avoiding over-fertilization of the soil: Over-fertilization can cause dense growth of rice plants that can encourage the development of rice blast."
+    ],
+    "cause": "The fungus thrives in warm and humid conditions and can spread quickly in fields with high levels of humidity and prolonged leaf wetness. The fungus can also survive in the soil and on rice residue, making it difficult to control. Factors such as poor field management, the use of susceptible rice cultivars, and over-fertilization of the soil can also contribute to the development of the disease."
+  },
+  "4": {
+    "name": "Brown Spot",
+    "scientific_name": "Bipolaris oryzae",
+    "symptoms": "To identify brown spot, it is important to look for specific symptoms on the rice plants. One of the most observable damage is the numerous big spots on the leaves which can kill the whole leaf. Starting at the tillering stage, lesions can be observed on the leaves. They are initially small, circular, and dark brown to purple-brown. Fully developed lesions are circular to oval with a light brown to gray center, surrounded by a reddish brown margin caused by the toxin produced by the fungi. On susceptible varieties, lesions are 5−14 mm long which can cause leaves to wilt. On resistant varieties, the lesions are brown and pinhead-sized. Lesions on leaf sheaths are similar to those on the leaves. Infected glumes and panicle branches have dark brown to black oval spots or discoloration on the entire surface. Spikelets can also be infected, causing incomplete or disrupted grain filling and a reduction in grain quality. To confirm the diagnosis, one can check if spots are circular, brownish, and have a gray center surrounded by a reddish margin, which is a typical characteristic of brown spot caused by Bipolaris oryzae.",
+    "prevention": [
+      "Plant resistant varieties: Use rice varieties that have been developed to be resistant to brown spot. This is one of the most effective ways to prevent the disease from occurring. ",
+      "Proper cultural practices: Maintaining proper soil fertility and avoiding over-fertilization can help prevent brown spot. Also, avoid planting in fields that have a history of brown spot or that have been recently planted with rice.",
+      "Seed treatment: Treating seeds with fungicides (e.g., iprodione, propiconazole, azoxystrobin, trifloxystrobin, and carbendazim) as seed treatments and treat seeds with hot water (53−54°C) for 10−12 minutes before planting can control primary infection at the seedling stage. To increase effectiveness of treatment, pre-soak seeds in cold water for eight hours.",
+      "Crop rotation: Rotating crops can help prevent the build-up of the fungus that causes brown spot.",
+      "Field sanitation: Remove and destroy infected plant debris, volunteer rice plants, and weed hosts, as they can serve as a source of infection."
+    ],
+    "cause": "The disease can develop in areas with high relative humidity (86−100%) and temperature between 16 and 36°C. It is common in unflooded and nutrient-deficient soil, or in soils that accumulate toxic substances. For infection to occur, the leaves must be wet for 8−24 hours. The fungus can survive in the seed for more than four years and can spread from plant to plant through air. Major sources of brown spot in the field include: infected seed, which give rise to infected seedlings, volunteer rice, infected rice debris, weeds. Brown spot can occur at all crop stages, but the infection is most critical during maximum tillering up to the ripening stages of the crop."
+  },
+  "5": {
+    "name": "Dead Heart",
+    "scientific_name": "Fusarium moniliforme",
+    "symptoms": "Symptoms of the disease include the death of the central shoot, which appears white and dry. This is often referred to as \"dead heart.\" The disease can also cause the formation of whiteheads, which are small, white, fungal structures that appear on the surface of the infected tissue. In severe cases, the fungus can infect the entire plant, causing it to die. The fungus that causes dead heart can infect rice at any growth stage, but it is most destructive when it infects the seedlings. The fungus is spread by spores that are produced on infected plant debris. The spores can be carried by wind, water, or insects to healthy plants, where they can infect the central shoot.",
+    "prevention": [
+      "Use resistant varieties of rice",
+      "Use fungicides in conjunction with good crop management practices",
+      "Crop rotation",
+      "Proper irrigation",
+      "Avoid planting in recently infested fields",
+      "Remove and destroy infected plants",
+      "Avoid over-watering or flooding the field."
+    ],
+    "cause": "It develops in rice fields that are under high nitrogen fertilization and high temperature. It develops in rice fields that are under high nitrogen fertilization and high temperature."
   }
 }

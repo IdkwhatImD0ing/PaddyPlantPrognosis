@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import {Home, Diseases, Resources, About, Diagnose, Disease} from './pages';
-import {Navbar} from './components';
+import {Home, Diseases, Resources, About, Diagnose, Disease } from './pages';
+import { Navbar } from './components';
 import './App.css';
 
 function App() {

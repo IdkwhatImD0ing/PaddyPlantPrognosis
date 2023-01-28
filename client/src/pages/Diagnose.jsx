@@ -79,18 +79,18 @@ const Diagnose = () => {
         </p>
         <p className="text-[16px] mt-10">Upload an image or choose one of our demo images below!</p>
 
-        <select onChange={(e) => updateSelect(e)} value={select} className="mt-6 bg-white border px-4 py-2 w-[4.5rem] rounded-md text-center " ame="paddies" id="paddies">
+        <select onChange={(e) => updateSelect(e)} value={select} className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center " ame="paddies" id="paddies">
           <option value="none" selected disabled hidden></option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+          <option value="1">Bacterial Leaf Blight</option>
+          <option value="2">Bacterial Leaf Streak</option>
+          <option value="3">Bacterial Panicle Blight</option>
+          <option value="4">Blast</option>
+          <option value="5">Brown Spot</option>
+          <option value="6">Dead Heart</option>
+          <option value="7">Downy Mildew</option>
+          <option value="8">Hispa</option>
+          <option value="9">Normal</option>
+          <option value="10">Tungro</option>
         </select>
         <input 
           onChange={(e) => updateUserImage(e)} 

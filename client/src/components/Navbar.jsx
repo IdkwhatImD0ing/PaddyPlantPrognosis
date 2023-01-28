@@ -11,12 +11,15 @@ const Navbar = () => {
           <Link to="/resources" className="hover:text-[#537a5a]">Resources</Link>
           <Link to="/about" className="hover:text-[#537a5a]">About</Link>
         </div>
-        <div className="absolute left-[50%]">
-          <Link to="/"><img className="w-[10rem]" src={logo}/></Link>
-        </div>
+
         <div className="lg:hidden cursor-pointer">
           <img src={hamburgerMenu} alt="hamburgerMenu" className="w-8" />
         </div>
+
+        <Link to="/">
+          <img className="absolute left-0 right-0 top-2 text-center m-auto object-cover w-[8rem] h-[4rem]" src={logo}/>
+        </Link>
+
         <div>
           <button className="hover:bg-[#b8e4bb] bg-[#9ae19f] px-4 py-2 rounded-md">
             <Link to="/diagnose">Diagnose</Link>  

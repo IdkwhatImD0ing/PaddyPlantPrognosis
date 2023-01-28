@@ -31,20 +31,22 @@ const About = () => {
   ]
 
   return (
-    <div>
-        <h1 className="py-8 text-center text-[48px]">About Us</h1>
-        <div className='px-16'>
+    <div className='flex justify-center mb-6'>
+      <div className='w-[100rem]'>
+        <h1 className="py-6 text-center text-[48px] ">About Us</h1>
+        <div className='px-24'>
           <h2 className='text-[24px]'>About Paddy Plant Prognosis</h2>
-          <p className='pt-2 pb-8'>Paddy Plant Prognosis assists rice farmers with A.I. technology to detect diseases in their paddies, brings scientific information to light, and helps them with solutions from experts.</p>         
+          <p className='pt-2 pb-8'>Paddy Plant Prognosis assists rice farmers with A.I. technology to detect diseases in their paddies, brings scientific information to light, and helps them with solutions from experts</p>         
           <h2 className='text-[24px]'>Meet Our Contributors</h2>
-          <p className='pt-2'>We are thriving students with passionate in developing tools to help the world!</p>
-          <div>
+          <p className='pt-2 pb-6'>We are thriving students with passionate in developing tools to help the world!</p>
+          <div className="flex flex-col justify-between gap-6 pb-10">
             {contacts.map((contact, index) => (
               <Contributor key={index} photo={contact.photo} name={contact.name} linkedin={contact.linkedin} github={contact.github} info={contact.info} gmail={contact.gmail} />
             ))}
           </div>
-          
         </div>
+      </div>
+        
     </div>
   )
 }

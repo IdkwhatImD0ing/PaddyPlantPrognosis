@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Home, Diseases, Resources, About, Diagnose } from './pages'
-import { Navbar } from './components'
+import { Navbar, Footer } from './components'
 import './App.css';
 
 
@@ -18,8 +18,9 @@ function App() {
         <Route path='/diagnose' element={<Diagnose />}></Route>
       </Routes>
     </main>
+    <Footer />
     </BrowserRouter>
-
+    
   );
 }
 

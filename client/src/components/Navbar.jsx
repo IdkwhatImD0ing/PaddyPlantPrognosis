@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg"
 
 const Navbar = () => {
   return (
-    <nav className="bg-white h-[5rem] font-medium flex items-center justify-center px-10 border-b-[1px] shadow-sm text-[#2c302e]">
+    <nav className="bg-white h-[5rem] font-medium flex items-center justify-center px-6 lg:px-10 border-b-[1px] shadow-sm text-[#2c302e]">
       <div className="flex justify-between items-center h-full w-[100rem]">
         <div className="w-[18rem] hidden lg:flex justify-between">
           <Link to="/diseases" className="hover:text-[#537a5a]">Diseases</Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
 
         <Link to="/">
-          <img className="absolute left-0 right-0 top-2 text-center m-auto object-cover w-[8rem] h-[4rem]" src={logo}/>
+          <img className="lg:absolute lg:left-0 lg:right-0 lg:top-2 lg:text-center lg:m-auto object-cover w-[8rem] h-[4rem]" src={logo}/>
         </Link>
 
         <div>

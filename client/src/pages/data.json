@@ -1,0 +1,15 @@
+{
+  "0": {
+    "name": "Bacterial Leaf Blight",
+    "scientific_name": "Xanthomonas oryzae pv. oryzae.",
+    "symptoms": "On seedlings, the symptoms begin as grayish-green leaves that roll up and eventually turn yellow to straw-colored before wilting and dying. This is known as \"kresek\" and may be confused with early rice stem borer damage. To distinguish the symptoms, you can squeeze the lower end of infected seedlings between your fingers, which should show yellowish bacterial ooze coming out of the cut ends. Rice plants with kresek will not be easily pulled out from the soil. On older plants, symptoms appear as water-soaked to yellow-orange stripes on leaf blades or leaf tips, or on mechanically injured parts of leaves. These lesions have a wavy margin and progress towards the leaf base. On young lesions, a milky dew drop-like bacterial ooze can be observed early in the morning, which later dries up and becomes small yellowish beads on the leaf. Old lesions turn yellow to grayish-white with black dots due to the growth of various saprophytic fungi. On severely infected leaves, the lesions may extend to the leaf sheath. To quickly diagnose bacterial blight on a leaf, you can cut a young lesion across and place it in a transparent glass container with clear water. After a few minutes, hold the container against light and observe for thick or turbid liquid coming from the cut end of the leaf.",
+    "prevention": [
+      "Planting resistant varieties has been proven to be the most efficient, most reliable, and cheapest way to control bacterial blight.",
+      "Use balanced amounts of plant nutrients, especially nitrogen.",
+      "Ensure good drainage of fields (in conventionally flooded crops) and nurseries.",
+      "Keep fields clean. Remove weed hosts and plow under rice stubble, straw, rice ratoons and volunteer seedlings, which can serve as hosts of bacteria.",
+      "Allow fallow fields to dry in order to suppress disease agents in the soil and plant residues."
+    ],
+    "cause": "The disease is most likely to develop in areas that have weeds and stubbles of infected plants. It can occur in both tropical and temperate environments, particularly in irrigated and rainfed lowland areas. In general, the disease favors temperatures at 25−34°C, with relative humidity above 70%. It is commonly observed when strong winds and continuous heavy rains occur, allowing the disease-causing bacteria to easily spread through ooze droplets on lesions of infected plants. Bacterial blight can be severe in susceptible rice varieties under high nitrogen fertilization."
+  }
+}

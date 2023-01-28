@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import hamburgerMenu from "../assets/menu.png";
+import logo from "../assets/logo.svg"
 
 const Navbar = () => {
   return (
@@ -11,7 +12,7 @@ const Navbar = () => {
           <Link to="/about" className="">About</Link>
         </div>
         <div className="absolute left-[50%]">
-          <Link to="/">logo</Link>
+          <Link to="/"><img className="w-[10rem]" src={logo}/></Link>
         </div>
         <div className="md:hidden cursor-pointer">
           <img src={hamburgerMenu} alt="hamburgerMenu" className="w-8" />

@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
-    <main className="bg-[#F9FAFE] w-full">
+    <main className="">
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/diseases' element={<Diseases />}></Route>
@@ -17,7 +17,6 @@ function App() {
         <Route path='/diagnose' element={<Diagnose />}></Route>
       </Routes>
     </main>
-    
     </BrowserRouter>
   );
 }

@@ -1,6 +1,9 @@
 import {Stack, Typography, Box} from '@mui/material';
 import React from 'react';
 import {Parallax} from 'react-parallax';
+import ForestIcon from '@mui/icons-material/Forest';
+import SearchIcon from '@mui/icons-material/Search';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 const Problem = () => {
   return (
@@ -16,7 +19,7 @@ const Problem = () => {
           maxWidth="800px"
           direction="column"
           alignItems="center"
-          spacing={5}
+          spacing={3}
           justifyContent="center"
           sx={{
             paddingTop: '150px',
@@ -28,6 +31,7 @@ const Problem = () => {
           <Typography variant="h4" sx={{color: 'black'}} align="center">
             Problem Statement:
           </Typography>
+          <ForestIcon />
           <Typography variant="h6" sx={{color: 'black'}} align="center">
             Rice (Oryza sativa) is a staple food for a large portion of the
             world's population, and paddy, the raw grain before removal of husk,
@@ -39,7 +43,7 @@ const Problem = () => {
             leading to significant yield loss. These diseases can manifest in
             various ways, such as discoloration, wilting, and stunted growth.
           </Typography>
-
+          <SearchIcon />
           <Typography variant="h6" sx={{color: 'black'}} align="center">
             Expert supervision is typically necessary to mitigate these diseases
             and prevent crop loss. However, the availability of crop protection
@@ -49,7 +53,7 @@ const Problem = () => {
             time-consuming, which can delay treatment and lead to further crop
             loss.
           </Typography>
-
+          <SmartToyIcon />
           <Typography variant="h6" sx={{color: 'black'}} align="center">
             Given the challenges of manual disease identification in paddy
             cultivation, our app, Paddy Plant Prognosis, has been developed to
@@ -58,10 +62,9 @@ const Problem = () => {
             accuracy and speed of disease identification in paddy crops. With
             our app, farmers can simply take a picture of their plant and upload
             it to our system, which will quickly analyze the photo and identify
-            any potential diseases. This way, farmers can take timely action to
-            protect their crops and avoid potential loss. By catching diseases
-            early, farmers can save both time and money that would have been
-            spent on costly treatments and labor.
+            any potential diseases. By catching diseases early, farmers can save
+            both time and money that would have been spent on costly treatments
+            and labor.
           </Typography>
         </Stack>
       </Box>

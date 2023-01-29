@@ -4,31 +4,13 @@ import {Parallax} from 'react-parallax';
 
 const Problem = () => {
   return (
-    <Parallax bgImage="/statement.webp" strength={400} blur={2}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Stack
-          maxWidth="800px"
-          direction="column"
-          alignItems="center"
-          spacing={5}
-          justifyContent="center"
-          sx={{
-            paddingTop: '150px',
-            paddingBottom: '150px',
-            paddingLeft: '50px',
-            paddingRight: '50px',
-          }}
-        >
-          <Typography variant="h4" sx={{color: 'black'}} align="center">
+    <Parallax bgImage="/bg.webp" strength={400} blur={2}>
+      <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col justify-center w-[70rem] bg-white px-[2rem] py-[2rem] mx-[2rem] rounded-xl text-[#2c302e]">
+          <div className="font-bold font-serif text-[32px]">
             Problem Statement:
-          </Typography>
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
+          </div>
+          <div className="text-[16px] mt-4">
             Rice (Oryza sativa) is a staple food for a large portion of the
             world's population, and paddy, the raw grain before removal of husk,
             is the primary form in which it is cultivated. Paddy cultivation is
@@ -38,9 +20,9 @@ const Problem = () => {
             supervision because several diseases and pests can affect the crop,
             leading to significant yield loss. These diseases can manifest in
             various ways, such as discoloration, wilting, and stunted growth.
-          </Typography>
-
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
+          </div>
+          <br />
+          <div className="text-[16px]">
             Expert supervision is typically necessary to mitigate these diseases
             and prevent crop loss. However, the availability of crop protection
             experts is limited, and manual disease diagnosis is often tedious
@@ -48,9 +30,9 @@ const Problem = () => {
             to experts is limited. Additionally, manual diagnosis can be
             time-consuming, which can delay treatment and lead to further crop
             loss.
-          </Typography>
-
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
+          </div>
+          <br />
+          <div className="text-[16px]">
             Given the challenges of manual disease identification in paddy
             cultivation, our app, Paddy Plant Prognosis, has been developed to
             automate this process. By utilizing computer vision-based
@@ -62,9 +44,9 @@ const Problem = () => {
             protect their crops and avoid potential loss. By catching diseases
             early, farmers can save both time and money that would have been
             spent on costly treatments and labor.
-          </Typography>
-        </Stack>
-      </Box>
+          </div>
+        </div>
+      </div>
     </Parallax>
   );
 };

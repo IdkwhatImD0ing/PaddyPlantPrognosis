@@ -105,9 +105,9 @@ const Diagnose = () => {
       <form
         onSubmit={(e) => handleSubmit(e)}
         action="POST"
-        className="flex flex-col justify-center mt-[5rem] w-[100rem] px-8"
+        className="flex flex-col justify-center mt-[10rem] w-[100rem] px-8"
       >
-        <h1 className="text-[32px] font-medium">Diagnose</h1>
+        <h1 className="text-[32px] font-bold font-serif">Diagnose</h1>
         <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
           This feature allows users to upload images of their paddy plants and
           uses <span className="font-bold text-[#537a5a]">image recognition technology</span>{' '}

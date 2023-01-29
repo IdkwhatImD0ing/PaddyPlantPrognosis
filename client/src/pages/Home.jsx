@@ -1,13 +1,12 @@
-import Features from '../components/Features';
-import Hero from '../components/Hero';
-import Problem from '../components/Problem';
+import { Hero, Problem, Features } from '../components';
+
 const Home = () => {
   return (
-    <>
+    <div className="">
       <Hero />
       <Problem />
       <Features />
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 # Paddy Plant Prognosis
-https://www.paddyplantprongnosis.tech/
+https://www.paddyplantprognosis.tech/
 
 **Contributors:** [@IdkwhatImD0ing](https://github.com/IdkwhatImD0ing) [@simon-quach](https://github.com/simon-quach) [@triquenguyen](https://github.com/triquenguyen)
 

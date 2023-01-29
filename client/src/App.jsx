@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route}  from 'react-router-dom';
 
 import {Home, Diseases, Resources, About, Diagnose, Disease } from './pages';
 import { Navbar, Footer } from './components';

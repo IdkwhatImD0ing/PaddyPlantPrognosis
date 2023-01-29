@@ -37,6 +37,13 @@ const Diagnose = () => {
   // Sends a POST request to the server
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Alerts user if no image is selected
+    if (!image) {
+      alert("Please submit a valid image.")
+      return
+    }
+
     const data = imageData.data;
     const length = imageData.height;
     const width = imageData.width;
@@ -51,6 +58,7 @@ const Diagnose = () => {
       }
     }
     setLoading(true);
+
     fetch('https://paddydoctor.hop.sh/predict', {
       method: 'POST',
       headers: {
@@ -159,7 +167,7 @@ const Diagnose = () => {
 
         <button
           type="submit"
-          className="mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
+          className="transition ease-in-out duration-100 mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
         >
           Upload
         </button>

@@ -15,7 +15,6 @@ export default function Disease() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
-
         backgroundColor: 'lightgreen',
       }}
     >

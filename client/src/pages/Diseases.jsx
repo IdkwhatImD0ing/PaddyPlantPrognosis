@@ -1,6 +1,4 @@
-import Disease from "./Disease"
 import Data from './data.json'
-import { Link } from "react-router-dom"
 import DiseaseCard from "../components/DiseaseCard"
 
 
@@ -9,12 +7,13 @@ const Diseases = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="w-[100rem] px-8 mt-[5rem] mb-[5rem]">
+      <div className="w-[100rem] px-8 mt-[10rem] mb-[5rem] text-[#2c302e]">
         <h1 className="font-serif text-[32px] font-bold">Diseases</h1>
-        <p>Learn more about the diseases we detect</p>
-        <div className="flex flex-col gap-4">
+        <p className="text-[#666e75]">Learn more about the diseases that we detect.</p>
+
+        <div className="flex flex-wrap gap-4 mt-[2rem]">
           {pages.map(page => (
-            <Link to={`/diseases/${page}`}><DiseaseCard photo={`/sample-paddies/${page}.jpg`} name={Data[page].name} description={`${Data[page].cause.slice(0,238).replace(/^\s+|\s+$/gm,'')}...`}/></Link>
+            <DiseaseCard page={page} photo={`/sample-paddies/${page}.jpg`} name={Data[page].name} description={`${Data[page].cause.slice(0,70).replace(/^\s+|\s+$/gm,'')}...`}/>
           ))}
         </div>
       </div>

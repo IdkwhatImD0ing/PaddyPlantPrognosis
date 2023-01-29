@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
-
-import axios from 'axios';
+import {useSpring, animated} from '@react-spring/web';
 
 const Diagnose = () => {
   // STATES
@@ -10,6 +9,26 @@ const Diagnose = () => {
   const [imageData, setImageData] = useState(null); // State for user uploaded image
   const [loading, setLoading] = useState(false); // State for loading
   const navigate = useNavigate();
+
+  const fadeLeft = useSpring({
+    from: {opacity: 0, transform: 'translateX(-100px)'},
+    to: {opacity: 1, transform: 'translateX(0px)'},
+    config: {duration: 500},
+  });
+
+  const fadeLeft2 = useSpring({
+    from: {opacity: 0, transform: 'translateX(-100px)'},
+    to: {opacity: 1, transform: 'translateX(0px)'},
+    config: {duration: 500},
+    delay: 500,
+  });
+
+  const fadeLeft3 = useSpring({
+    from: {opacity: 0, transform: 'translateX(-100px)'},
+    to: {opacity: 1, transform: 'translateX(0px)'},
+    config: {duration: 500},
+    delay: 1000,
+  });
 
   // EFFECTS
   useEffect(() => {
@@ -40,8 +59,8 @@ const Diagnose = () => {
 
     // Alerts user if no image is selected
     if (!image) {
-      alert("Please submit a valid image.")
-      return
+      alert('Please submit a valid image.');
+      return;
     }
 
     const data = imageData.data;
@@ -115,62 +134,67 @@ const Diagnose = () => {
         action="POST"
         className="flex flex-col justify-center mt-[10rem] w-[100rem] px-8"
       >
-        <h1 className="text-[32px] font-bold font-serif">Diagnose</h1>
-        <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
-          This feature allows users to upload images of their paddy plants and
-          uses{' '}
-          <span className="font-bold text-[#537a5a]">
-            image recognition technology
-          </span>{' '}
-          to detect any signs of disease. It then provides a diagnosis of the
-          disease along with recommended treatment options. This feature is
-          designed to assist farmers in identifying and addressing potential
-          issues with their crops quickly and efficiently.
-        </p>
-        <p className="text-[16px] mt-10">
-          Upload an image or choose one of our demo images below!
-        </p>
+        <animated.div style={fadeLeft}>
+          <h1 className="text-[32px] font-bold font-serif">Diagnose</h1>
+          <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
+            This feature allows users to upload images of their paddy plants and
+            uses{' '}
+            <span className="font-bold text-[#537a5a]">
+              image recognition technology
+            </span>{' '}
+            to detect any signs of disease. It then provides a diagnosis of the
+            disease along with recommended treatment options. This feature is
+            designed to assist farmers in identifying and addressing potential
+            issues with their crops quickly and efficiently.
+          </p>
+        </animated.div>
+        <animated.div style={fadeLeft2}>
+          <p className="text-[16px] mt-10">
+            Upload an image or choose one of our demo images below!
+          </p>
 
-        <select
-          onChange={(e) => updateSelect(e)}
-          value={select}
-          className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center "
-          ame="paddies"
-          id="paddies"
-        >
-          <option value="none" disabled hidden></option>
-          <option value="0">Bacterial Leaf Blight</option>
-          <option value="1">Bacterial Leaf Streak</option>
-          <option value="2">Bacterial Panicle Blight</option>
-          <option value="3">Blast</option>
-          <option value="4">Brown Spot</option>
-          <option value="5">Dead Heart</option>
-          <option value="6">Downy Mildew</option>
-          <option value="7">Hispa</option>
-          <option value="8">Normal</option>
-          <option value="9">Tungro</option>
-        </select>
-        <input
-          onChange={(e) => updateUserImage(e)}
-          type="file"
-          name="userImage"
-          id="userImage"
-          className="mt-6 block w-full text-sm text-[#666e75] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2c302e] file:text-[#9ae19f] hover:file:bg-[#3b5449]"
-        />
-        {image && (
-          <img
-            src={URL.createObjectURL(image)}
-            alt="image"
-            className="w-[20rem] mt-6 rounded-xl"
+          <select
+            onChange={(e) => updateSelect(e)}
+            value={select}
+            className="mt-6 bg-white border px-4 py-2 w-[14rem] rounded-md text-center "
+            ame="paddies"
+            id="paddies"
+          >
+            <option value="none" disabled hidden></option>
+            <option value="0">Bacterial Leaf Blight</option>
+            <option value="1">Bacterial Leaf Streak</option>
+            <option value="2">Bacterial Panicle Blight</option>
+            <option value="3">Blast</option>
+            <option value="4">Brown Spot</option>
+            <option value="5">Dead Heart</option>
+            <option value="6">Downy Mildew</option>
+            <option value="7">Hispa</option>
+            <option value="8">Normal</option>
+            <option value="9">Tungro</option>
+          </select>
+          <input
+            onChange={(e) => updateUserImage(e)}
+            type="file"
+            name="userImage"
+            id="userImage"
+            className="mt-6 block w-full text-sm text-[#666e75] file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#2c302e] file:text-[#9ae19f] hover:file:bg-[#3b5449]"
           />
-        )}
-
-        <button
-          type="submit"
-          className="transition ease-in-out duration-100 mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
-        >
-          Upload
-        </button>
+          {image && (
+            <img
+              src={URL.createObjectURL(image)}
+              alt="image"
+              className="w-[20rem] mt-6 rounded-xl"
+            />
+          )}
+        </animated.div>
+        <animated.div style={fadeLeft3}>
+          <button
+            type="submit"
+            className="transition ease-in-out duration-100 mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
+          >
+            Upload
+          </button>
+        </animated.div>
       </form>
     </div>
   );

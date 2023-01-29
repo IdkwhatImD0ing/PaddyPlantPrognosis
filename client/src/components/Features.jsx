@@ -1,10 +1,24 @@
-import { Parallax } from 'react-parallax';
-import { Upload, Analyze, Teach, Understand } from '../assets/features-icons';
-
+import React, {useRef} from 'react';
+import {Parallax} from 'react-parallax';
+import {Upload, Analyze, Teach, Understand} from '../assets/features-icons';
+import {useIntersectionObserver} from './hook';
+import {animated, useSpring} from '@react-spring/web';
 const Features = () => {
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+
+  const fadeIn = useSpring({
+    opacity: dataRef?.isIntersecting ? 1 : 0,
+  });
+
   return (
     <Parallax bgImage="/field.webp" strength={400} blur={2}>
-      <div className="flex justify-center items-center h-[100vh] my-[4rem]">
+      <animated.div
+        className="flex justify-center items-center my-[10rem]"
+        style={fadeIn}
+      >
         <div className="transition ease-in-out duration-200 hover:shadow-xl shadow-md flex flex-col justify-center items-center w-[100rem] bg-white px-[2rem] py-[4rem] mx-[2rem] rounded-xl text-[#2c302e]">
           <div className="font-bold font-serif text-[48px]">Features:</div>
           <div className="flex flex-col lg:flex-row items-end justify-center mt-[2rem] space-x-6">
@@ -35,7 +49,8 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div>
+        <div ref={triggerRef} />
+      </animated.div>
     </Parallax>
   );
 };

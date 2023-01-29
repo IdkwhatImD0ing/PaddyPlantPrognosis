@@ -1,9 +1,23 @@
-import { Parallax } from 'react-parallax';
+import {Parallax} from 'react-parallax';
+import {useIntersectionObserver} from './hook';
+import {animated, useSpring} from '@react-spring/web';
+import React, {useRef} from 'react';
 
 const Problem = () => {
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+
+  const fadeIn = useSpring({
+    opacity: dataRef?.isIntersecting ? 1 : 0,
+  });
   return (
     <Parallax bgImage="/bg.webp" strength={400} blur={2}>
-      <div className="flex justify-center items-center h-screen my-[10rem]">
+      <animated.div
+        className="flex justify-center items-center my-[10rem]"
+        style={fadeIn}
+      >
         <div className="transition ease-in-out duration-200 hover:shadow-xl shadow-md flex flex-col justify-center w-[70rem] bg-white px-[2rem] py-[2rem] mx-[2rem] rounded-xl text-[#2c302e]">
           <div className="font-bold font-serif text-[32px]">
             Problem Statement:
@@ -44,7 +58,8 @@ const Problem = () => {
             spent on costly treatments and labor.
           </div>
         </div>
-      </div>
+        <div ref={triggerRef} />
+      </animated.div>
     </Parallax>
   );
 };

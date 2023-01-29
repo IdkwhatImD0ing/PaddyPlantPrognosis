@@ -42,7 +42,7 @@ const Diseases = () => {
                 photo={`/sample-paddies/${page}.jpg`}
                 name={Data[page].name}
                 description={`${Data[page].cause
-                  .slice(0, 70)
+                  .slice(0, 50)
                   .replace(/^\s+|\s+$/gm, '')}...`}
               />
             </animated.div>

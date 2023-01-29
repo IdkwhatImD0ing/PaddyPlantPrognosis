@@ -5,6 +5,7 @@ import Hero from './Hero'
 import Problem from './Problem'
 import Features from './Features'
 import DiseaseCard from './DiseaseCard'
+import ScrollToTop from './ScrollToTop'
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   Problem,
   Features,
   DiseaseCard,
+  ScrollToTop
 }

@@ -1,20 +1,15 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax';
 import {useSpring, animated} from '@react-spring/web';
 import useHover from './hook';
-import {useIntersectionObserver} from './hook';
 
 const Hero = () => {
   const [hoverRef, isHovered] = useHover();
   const [show, setShow] = useState(false);
-  const triggerRef = useRef();
-  const dataRef = useIntersectionObserver(triggerRef, {
-    freezeOnceVisible: false,
-  });
 
   const buttonProps = useSpring({
-    opacity: show ? (dataRef?.isIntersecting ? 1 : 0) : 0,
+    opacity: show ? 1 : 0,
     transform: isHovered ? 'scale(1.1)' : 'scale(1)',
     config: {duration: 200},
   });
@@ -22,10 +17,8 @@ const Hero = () => {
   const fadeDown = useSpring({
     from: {opacity: 0, transform: 'translateY(-50px)'},
     to: {
-      opacity: dataRef?.isIntersecting ? 1 : 0,
-      transform: dataRef?.isIntersecting
-        ? 'translateY(0px)'
-        : 'translateY(-50px)',
+      opacity: 1,
+      transform: 'translateY(0px)',
     },
     config: {duration: 500},
   });

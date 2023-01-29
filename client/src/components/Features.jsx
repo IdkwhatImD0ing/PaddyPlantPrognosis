@@ -1,16 +1,16 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import {Parallax} from 'react-parallax';
 import {Upload, Analyze, Teach, Understand} from '../assets/features-icons';
-import {useIntersectionObserver} from './hook';
+
 import {animated, useSpring} from '@react-spring/web';
 const Features = () => {
-  const triggerRef = useRef();
-  const dataRef = useIntersectionObserver(triggerRef, {
-    freezeOnceVisible: false,
-  });
-
   const fadeIn = useSpring({
-    opacity: dataRef?.isIntersecting ? 1 : 0,
+    to: {
+      opacity: 1,
+    },
+    from: {
+      opacity: 0,
+    },
   });
 
   return (

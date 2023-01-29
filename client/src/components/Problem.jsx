@@ -1,16 +1,14 @@
 import {Parallax} from 'react-parallax';
-import {useIntersectionObserver} from './hook';
 import {animated, useSpring} from '@react-spring/web';
-import React, {useRef} from 'react';
 
 const Problem = () => {
-  const triggerRef = useRef();
-  const dataRef = useIntersectionObserver(triggerRef, {
-    freezeOnceVisible: false,
-  });
-
   const fadeIn = useSpring({
-    opacity: dataRef?.isIntersecting ? 1 : 0,
+    to: {
+      opacity: 1,
+    },
+    from: {
+      opacity: 0,
+    },
   });
   return (
     <Parallax bgImage="/bg.webp" strength={400} blur={2}>

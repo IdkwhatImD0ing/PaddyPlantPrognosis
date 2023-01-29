@@ -2,9 +2,11 @@
 
 [Demo Link](https://www.paddyplantprognosis.tech/)
 
-[Youtube Link](https://www.youtube.com/watch?v=NN7pJ_vwt40)
+[Youtube Link](https://www.youtube.com/watch?v=M_xLQeglzgU)
 
 [Kaggle Dataset used for Model](https://www.kaggle.com/competitions/paddy-disease-classification)
+
+[Link to ML Model](https://github.com/IdkwhatImD0ing/PaddyPlantPrognosis/blob/main/modelv2.ipynb)
 
 
 **Contributors:** [@IdkwhatImD0ing](https://github.com/IdkwhatImD0ing) [@simon-quach](https://github.com/simon-quach) [@triquenguyen](https://github.com/triquenguyen)

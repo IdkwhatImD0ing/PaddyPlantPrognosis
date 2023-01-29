@@ -1,7 +1,11 @@
 # Paddy Plant Prognosis
+
 [Demo Link](https://www.paddyplantprognosis.tech/)
+
 [Youtube Link](https://www.youtube.com/watch?v=NN7pJ_vwt40)
+
 [Kaggle Dataset used for Model](https://www.kaggle.com/competitions/paddy-disease-classification)
+
 
 **Contributors:** [@IdkwhatImD0ing](https://github.com/IdkwhatImD0ing) [@simon-quach](https://github.com/simon-quach) [@triquenguyen](https://github.com/triquenguyen)
 

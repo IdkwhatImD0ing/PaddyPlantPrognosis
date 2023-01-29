@@ -48,7 +48,7 @@ const About = () => {
               them with solutions from experts.
             </p>
             <br />
-            <p className="pt-2text-[16px] text-[#666e75]">
+            <p className="text-[16px] text-[#666e75]">
               PPP uses a{' '}
               <span className="font-bold text-[#537a5a]">
                 custom trained machine learning model

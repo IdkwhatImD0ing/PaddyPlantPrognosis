@@ -1,49 +1,42 @@
 import React from 'react';
-import {Box, Stack, Typography} from '@mui/material';
 import {Parallax} from 'react-parallax';
-const url = '/field.webp';
+import {Upload, Analyze, Teach, Understand} from '../assets/features-icons';
 
 const Features = () => {
   return (
-    <Parallax bgImage={url} strength={400} blur={2}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Stack
-          maxWidth="800px"
-          direction="column"
-          alignItems="center"
-          spacing={5}
-          justifyContent="center"
-          sx={{
-            paddingTop: '150px',
-            paddingBottom: '150px',
-            paddingLeft: '50px',
-            paddingRight: '50px',
-          }}
-        >
-          <Typography variant="h4" sx={{color: 'black'}} align="center">
-            Features:
-          </Typography>
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
-            Upload a photo of your paddy plant
-          </Typography>
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
-            Our system will analyze the photo and let you know what's wrong with
-            your plant
-          </Typography>
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
-            Teaches you how to spot the disease in the future
-          </Typography>
-          <Typography variant="h6" sx={{color: 'black'}} align="center">
-            Understand what causes the disease and how to treat it
-          </Typography>
-        </Stack>
-      </Box>
+    <Parallax bgImage="/field.webp" strength={400} blur={2}>
+      <div className="flex justify-center items-center h-[100vh] my-[4rem]">
+        <div className="flex flex-col justify-center items-center w-[100rem] bg-white px-[2rem] py-[4rem] mx-[2rem] rounded-xl text-[#2c302e]">
+          <div className="font-bold font-serif text-[48px]">Features:</div>
+          <div className="flex flex-col lg:flex-row items-end justify-center mt-[2rem] space-x-6">
+            <div className="text-[16px] flex flex-col justify-center items-center text-center w-[100%]">
+              <p className="lg:mb-[1.5rem]">
+                Upload a photo of your paddy plant
+              </p>
+              <img src={Upload} alt="upload" className="w-[5rem] mt-[1rem]" />
+            </div>
+            <div className="text-[16px] flex flex-col justify-center items-center text-center w-[100%] mt-[3rem] lg:mt-0">
+              <p>
+                Our system will analyze the photo and let you know what's wrong
+                with your plant
+              </p>
+              <img src={Analyze} alt="upload" className="w-[5rem] mt-[1rem]" />
+            </div>
+            <div className="text-[16px] flex flex-col justify-center items-center text-center w-[100%] mt-[3rem] lg:mt-0">
+              <p>Teaches you how to spot the disease in the future</p>
+              <img src={Teach} alt="upload" className="w-[5rem] mt-[1rem]" />
+            </div>
+            <div className="text-[16px] flex flex-col justify-center items-center text-center w-[100%] mt-[3rem] lg:mt-0">
+              <p>Understand what causes the disease and how to treat it</p>
+              <img
+                src={Understand}
+                alt="upload"
+                className="w-[5rem] mt-[1rem]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </Parallax>
   );
 };

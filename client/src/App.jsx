@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className="min-h-[calc(100vh-160px)]">
+      <main className="min-h-[calc(100vh-80px)]">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/diseases" element={<Diseases />}></Route>

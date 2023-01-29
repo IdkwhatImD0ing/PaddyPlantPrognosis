@@ -4,7 +4,7 @@ import {Parallax} from 'react-parallax';
 const url = '/bg.webp';
 const Hero = () => {
   return (
-    <Parallax bgImage={url} strength={400} blur={2}>
+    <Parallax bgImage={url} strength={400} blur={4}>
       <Box
         height="100vh"
         sx={{
@@ -27,10 +27,9 @@ const Hero = () => {
           </Typography>
           <Typography variant="h7" sx={{color: 'black'}} align="center">
             Say goodbye to the hassle of manually inspecting your paddy plants
-            for diseases. With our new technology, all you have to do is take a
-            picture of your plant and upload it to our system. We'll quickly
-            analyze the photo and let you know what's wrong with your plant,
-            without the need for lab samples or complicated inspections.
+            for diseases. Simply upload a photo and we'll let you know what's
+            wrong with your plant, without the need for lab samples or
+            complicated inspections.
           </Typography>
           <Button
             variant="contained"

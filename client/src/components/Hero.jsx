@@ -30,7 +30,6 @@ const Hero = () => {
   }, []);
   return (
     <Parallax bgImage="/statement.webp" strength={400} blur={2}>
-      <div ref={triggerRef} />
       <div className="h-screen flex justify-center items-center">
         <div className="max-w[1000px] flex flex-col items-center justify-around w-[100rem] h-[60%] text-center mx-[2rem]">
           <animated.div
@@ -55,7 +54,6 @@ const Hero = () => {
           </animated.div>
         </div>
       </div>
-      <div ref={triggerRef} />
     </Parallax>
   );
 };

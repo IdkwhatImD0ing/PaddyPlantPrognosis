@@ -12,7 +12,6 @@ const Problem = () => {
   });
   return (
     <Parallax bgImage="/bg.webp" strength={400} blur={2}>
-      <div ref={triggerRef} />
       <animated.div
         className="flex justify-center items-center my-[10rem]"
         style={fadeIn}
@@ -57,7 +56,6 @@ const Problem = () => {
             spent on costly treatments and labor.
           </div>
         </div>
-        <div ref={triggerRef} />
       </animated.div>
     </Parallax>
   );

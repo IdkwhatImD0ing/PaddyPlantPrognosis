@@ -4,6 +4,7 @@ import Footer from './Footer'
 import Hero from './Hero'
 import Problem from './Problem'
 import Features from './Features'
+import DiseaseCard from './DiseaseCard'
 
 export {
   Navbar,
@@ -11,5 +12,6 @@ export {
   Footer,
   Hero,
   Problem,
-  Features
+  Features,
+  DiseaseCard,
 }

@@ -33,7 +33,7 @@
     "scientific_name": "Burkholderia glumae",
     "symptoms": "Symptoms of bacterial panicle blight include small clusters of panicles that do not develop properly during grain fill and remain upright rather than bending down with the weight of the grain. Infected grains can be unevenly distributed on the panicle, the stem below an infected panicle remains green, and blanked grains are uniformly tan at first. Grains which fill but are infected later in the season have a light to medium brown discolouration on the lower third to half of the hulls.",
     "prevention": [
-      "Practicing \"Come clean, Go clean.",
+      "Practicing \"Come clean, Go clean\"",
       "Ensuring that all staff and visitors are instructed in and adhere to business management hygiene requirements.",
       "Sourcing propagation material of a known high health status from reputable suppliers.",
       "Keeping records of all actions taken.",
@@ -113,7 +113,7 @@
     ],
     "cause": "Rice Hispa is caused by the insect Scirpophaga incertulas, which is a small, slender, and yellowish-white worm that feeds on the stem and leaves of the rice plant, primarily attacking the young plants during the vegetative stage. It's considered a major pest, as it can cause significant yield loss and even complete crop failure in some cases."
   },
-  "9": {
+  "8": {
     "name": "Tungro",
     "scientific_name": "Tospovirus genus and Bacilliformvirus genus",
     "symptoms": "The symptoms of tungro rice disease include yellowing of leaves, stunted growth, reduced yield, rolling of leaves, small and empty grains, leaf sheath rot, and plant death in some severe cases.",
@@ -127,7 +127,7 @@
     ],
     "cause": "Tungro is a rice disease caused by two different viruses, the Rice tungro spherical virus (RTSV) and the Rice tungro bacilliform virus (RTBV). The scientific name for RTSV is Tospovirus genus and for RTBV is Bacilliformvirus genus. Both of these viruses are transmitted by the small brown planthopper (Laodelphax striatellus) and are considered to be the most serious rice diseases in Asia."
   },
-  "8": {
+  "9": {
     "name": "Normal",
     "scientific_name": null,
     "symptoms": "A normal and healthy rice plant has strong stem, green leaves, healthy roots, abundant tillers, full panicles, plump grains, good growth rate, and no signs of insect damage or disease.",

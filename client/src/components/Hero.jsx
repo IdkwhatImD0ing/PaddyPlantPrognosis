@@ -1,21 +1,32 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax';
 import {useSpring, animated} from '@react-spring/web';
 import useHover from './hook';
+import {useIntersectionObserver} from './hook';
 
 const Hero = () => {
   const [hoverRef, isHovered] = useHover();
   const [show, setShow] = useState(false);
+  const triggerRef = useRef();
+  const dataRef = useIntersectionObserver(triggerRef, {
+    freezeOnceVisible: false,
+  });
+
   const buttonProps = useSpring({
-    opacity: show ? 1 : 0,
+    opacity: show ? (dataRef?.isIntersecting ? 1 : 0) : 0,
     transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-    config: {duration: 500},
+    config: {duration: 200},
   });
 
   const fadeDown = useSpring({
     from: {opacity: 0, transform: 'translateY(-50px)'},
-    to: {opacity: 1, transform: 'translateY(0px)'},
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      transform: dataRef?.isIntersecting
+        ? 'translateY(0px)'
+        : 'translateY(-50px)',
+    },
     config: {duration: 500},
   });
 
@@ -37,7 +48,7 @@ const Hero = () => {
             </h1>
             <p className="text-[#bdd8bf] font-semibold drop-shadow-lg text-center text-[18px] mt-[2rem]">
               Say goodbye to the hassle of manually inspecting your paddy plants
-              for diseases.
+              for diseases
             </p>
           </animated.div>
           <animated.div ref={hoverRef} style={buttonProps}>
@@ -50,6 +61,7 @@ const Hero = () => {
           </animated.div>
         </div>
       </div>
+      <div ref={triggerRef} />
     </Parallax>
   );
 };

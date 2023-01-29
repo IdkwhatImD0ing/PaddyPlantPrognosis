@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <div className='flex justify-center'>
-      <div className='w-[100rem] px-8 mt-[5rem]'>
+      <div className='w-[100rem] px-8 mt-[5rem] mb-[5rem]'>
         <div className='flex flex-col lg:w-[50rem] w[20rem] text-[#2c302e]'>
         <p className='text-[18px] text-[#43b348] font-medium'>What is it?</p>
           <h1 className='text-[32px] font-medium'>About Paddy Plant Prognosis</h1>
@@ -49,9 +49,6 @@ const About = () => {
               The goal of PPP is to help farmers increase the productivity and profitability of their crops by providing them with the tools and knowledge they need to effectively manage disease and protect their plants.
             </p>
           </div>
-          
-          
-                 
           
           <p className='text-[18px] text-[#43b348] font-medium mt-6'>Who made it?</p>
           <h1 className='text-[32px] font-medium'>Meet Our Contributors</h1>

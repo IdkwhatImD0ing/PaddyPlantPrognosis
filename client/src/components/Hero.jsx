@@ -1,47 +1,28 @@
-import {Box, Typography, Stack, Button} from '@mui/material';
-import {Parallax} from 'react-parallax';
+import { Link } from 'react-router-dom'
+import { Parallax } from 'react-parallax';
 
-const url = '/bg.webp';
 const Hero = () => {
   return (
-    <Parallax bgImage={url} strength={400} blur={4}>
-      <Box
-        height="100vh"
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexGrow: 1,
-          flexDirection: 'column',
-        }}
-      >
-        <Stack
-          maxWidth="1000px"
-          direction="column"
-          alignItems="center"
-          spacing={2}
-          justifyContent="center"
-        >
-          <Typography variant="h4" sx={{color: 'black'}} align="center">
-            Paddy Plant Prognosis
-          </Typography>
-          <Typography variant="h7" sx={{color: 'black'}} align="center">
-            Say goodbye to the hassle of manually inspecting your paddy plants
-            for diseases. Simply upload a photo and we'll let you know what's
-            wrong with your plant, without the need for lab samples or
-            complicated inspections.
-          </Typography>
-          <Button
-            variant="contained"
-            href="/diagnose"
-            sx={{
-              backgroundColor: 'green',
-            }}
+    <Parallax bgImage='/statement.webp' strength={400} blur={2}>
+      <div className="h-screen flex justify-center items-center">
+        <div className="max-w[1000px] flex flex-col items-center justify-around w-[100rem] h-[60%] text-center mx-[2rem]">
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className="text-white lg:text-[96px] md:text-[72px] text-[55px] font-extrabold drop-shadow-2xl">
+              PADDY PLANT PROGNOSIS
+            </h1>
+            <p className="text-[#bdd8bf] font-semibold drop-shadow-lg text-center text-[18px] mt-[2rem]">
+              Say goodbye to the hassle of manually inspecting your paddy plants
+              for diseases.
+            </p>
+          </div>
+          <Link
+            to='/diagnose'
+            className="hover:bg-[#b8e4bb] bg-[#9ae19f] w-[14rem] px-6 py-4 text-[18px] rounded-md shadow-md font-semibold text-center"
           >
             Get Started Now!
-          </Button>
-        </Stack>
-      </Box>
+          </Link>
+        </div>
+      </div>
     </Parallax>
   );
 };

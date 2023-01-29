@@ -33,13 +33,11 @@ const About = () => {
   ];
 
   return (
-    <div className="flex justify-center">
-      <div className="w-[100rem] px-8 mt-[5rem] mb-[5rem]">
-        <div className="flex flex-col lg:w-[50rem] w[20rem] text-[#2c302e]">
-          <p className="text-[18px] text-[#43b348] font-medium">What is it?</p>
-          <h1 className="text-[32px] font-medium">
-            About Paddy Plant Prognosis
-          </h1>
+    <div className='flex justify-center'>
+      <div className='w-[100rem] px-8 mt-[10rem] mb-[5rem]'>
+        <div className='flex flex-col lg:w-[50rem] w[20rem] text-[#2c302e]'>
+        <p className='text-[18px] text-[#43b348] font-medium'>What is it?</p>
+          <h1 className='text-[32px] font-bold font-serif'>About Paddy Plant Prognosis</h1>
           <div className="mb-10">
             <p className="pt-2 text-[16px] text-[#666e75]">
               <span className="font-bold text-[#537a5a]">
@@ -75,15 +73,10 @@ const About = () => {
               their plants.
             </p>
           </div>
-
-          <p className="text-[18px] text-[#43b348] font-medium mt-6">
-            Who made it?
-          </p>
-          <h1 className="text-[32px] font-medium">Meet Our Contributors</h1>
-          <p className="pt-2 pb-6 text-[16px] text-[#666e75]">
-            We are thriving students with a passion for developing tools to help
-            the world!
-          </p>
+          
+          <p className='text-[18px] text-[#43b348] font-medium mt-6'>Who made it?</p>
+          <h1 className='text-[32px] font-bold font-serif'>Meet Our Contributors</h1>
+          <p className='pt-2 pb-6 text-[16px] text-[#666e75]'>We are thriving students with a passion for developing tools to help the world!</p>
           <div className="flex flex-col justify-between md:items-start items-center gap-6 pb-10">
             {contacts.map((contact, index) => (
               <Contributor

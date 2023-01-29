@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -8,7 +9,7 @@ const Diagnose = () => {
   const [image, setImage] = useState(null); // State for user uploaded image
   const [imageData, setImageData] = useState(null); // State for user uploaded image
   const [loading, setLoading] = useState(false); // State for loading
-  const [prediction, setPrediction] = useState(null); // State for prediction
+  const navigate = useNavigate();
 
   // EFFECTS
   useEffect(() => {
@@ -62,8 +63,7 @@ const Diagnose = () => {
       )
       .then((data) => {
         setLoading(false);
-        setPrediction(data);
-        console.log(data);
+        navigate('/diseases/' + data[0]);
       });
   };
 
@@ -83,6 +83,7 @@ const Diagnose = () => {
         (blob) => {
           const file = new File([blob], 'image.jpg', {type: 'image/jpeg'});
           setImage(file);
+          localStorage.setItem('userImage', URL.createObjectURL(file));
         },
         'image/jpeg',
         1,
@@ -95,6 +96,7 @@ const Diagnose = () => {
     if (e.target.files[0]) {
       // Resize the image to 300x300
       setImage(e.target.files[0]);
+      localStorage.setItem('userImage', URL.createObjectURL(e.target.files[0]));
     }
   };
 

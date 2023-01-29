@@ -1,11 +1,14 @@
+import Features from '../components/Features';
+import Hero from '../components/Hero';
+import Problem from '../components/Problem';
 const Home = () => {
   return (
-    <div className="flex justify-center w-full">
-      <div className="bg-green-200 w-[1440px] h-[555px]">
-        video
-      </div>
-    </div>
-  )
-}
+    <>
+      <Hero />
+      <Problem />
+      <Features />
+    </>
+  );
+};
 
-export default Home
+export default Home;

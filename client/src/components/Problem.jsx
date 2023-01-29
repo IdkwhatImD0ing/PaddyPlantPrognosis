@@ -8,7 +8,7 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 const Problem = () => {
   return (
     <Parallax bgImage="/bg.webp" strength={400} blur={2}>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen my-[10rem]">
         <div className="flex flex-col justify-center w-[70rem] bg-white px-[2rem] py-[2rem] mx-[2rem] rounded-xl text-[#2c302e]">
           <div className="font-bold font-serif text-[32px]">
             Problem Statement:

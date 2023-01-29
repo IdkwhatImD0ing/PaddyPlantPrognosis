@@ -9,6 +9,7 @@ const Footer = () => {
         </p>
         <a 
           href="https://github.com/IdkwhatImD0ing/PaddyPlantPrognosis"
+          target="_blank"
           className="text-white hover:text-[#56c75c] font-semibold"
         >
           Source Code

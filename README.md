@@ -1,6 +1,6 @@
 # Paddy Plant Prognosis
 
-**Paddy Plant Prognosis won Best Data Science Hack at [Hackrithmitic 2](https://hackrithmitic-2.devpost.com/project-gallery)
+**Paddy Plant Prognosis won Best Data Science Hack at [Hackrithmitic 2](https://hackrithmitic-2.devpost.com/project-gallery)**
 
 [Demo Link](https://www.paddyplantprognosis.tech/)
 

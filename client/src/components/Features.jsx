@@ -15,6 +15,7 @@ const Features = () => {
 
   return (
     <Parallax bgImage="/field.webp" strength={400} blur={2}>
+      <div ref={triggerRef} />
       <animated.div
         className="flex justify-center items-center my-[10rem]"
         style={fadeIn}

@@ -103,7 +103,7 @@ const About = () => {
             <p className='text-[18px] text-[#43b348] font-medium mt-6'>Who made it?</p>
             <h1 className='text-[32px] font-bold font-serif'>Meet Our Contributors</h1>
             <p className='pt-2 pb-6 text-[16px] text-[#666e75]'>We are thriving students with a passion for developing tools to help the world!</p>
-            <div className="flex flex-col justify-between md:items-start items-center gap-6 pb-10">
+            <div className="flex flex-col justify-between md:items-start gap-6 pb-10">
               {contacts.map((contact, index) => (
                 <animated.div style={trail[index]}>
                   <Contributor

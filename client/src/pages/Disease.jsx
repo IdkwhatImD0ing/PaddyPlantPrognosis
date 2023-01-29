@@ -6,6 +6,7 @@ export default function Disease() {
   const {id} = useParams();
   const disease = Data[id];
 
+  // ANIMATIONS
   const fadeDown1 = useSpring({
     from: {opacity: 0, transform: 'translateY(-50px)'},
     to: {opacity: 1, transform: 'translateY(0px)'},

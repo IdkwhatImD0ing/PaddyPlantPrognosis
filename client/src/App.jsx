@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route}  from 'react-router-dom';
 
 import {Home, Diseases, Resources, About, Diagnose, Disease } from './pages';
-import { Navbar, Footer } from './components';
+import { Navbar, Footer, ScrollToTop } from './components';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <main className="min-h-[calc(100vh-80px)]">
         <Routes>

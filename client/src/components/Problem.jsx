@@ -1,6 +1,9 @@
 import {Stack, Typography, Box} from '@mui/material';
 import React from 'react';
 import {Parallax} from 'react-parallax';
+import ForestIcon from '@mui/icons-material/Forest';
+import SearchIcon from '@mui/icons-material/Search';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 const Problem = () => {
   return (

@@ -4,8 +4,8 @@ import Gmail from "../assets/gmail-logo.png"
 
 const Contributor = ({ photo, name, info, linkedin, github, gmail }) => {
   return (
-    <div className="w-[40rem] flex bg-slate-100 rounded-xl shadow-md">
-        <img className="w-[10rem] rounded-xl" src={photo} alt="image"/>
+    <div className="md:w-[40rem] w-[100%] h-[10rem] flex bg-slate-100 rounded-xl shadow-md">
+        <img className="w-[10rem] rounded-xl object-cover" src={photo} alt="image"/>
         <div className="flex flex-col justify-between px-6 py-3 text-left">
             <figcaption>
                 <div className="text-left font-semibold">

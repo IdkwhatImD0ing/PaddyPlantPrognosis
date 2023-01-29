@@ -110,7 +110,7 @@ const Diagnose = () => {
         <h1 className="text-[32px] font-medium">Diagnose</h1>
         <p className="text-[16px] text-[#666e75] lg:w-[50rem] w[20rem] mt-4">
           This feature allows users to upload images of their paddy plants and
-          uses <span className="font-bold">image recognition technology</span>{' '}
+          uses <span className="font-bold text-[#537a5a]">image recognition technology</span>{' '}
           to detect any signs of disease. It then provides a diagnosis of the
           disease along with recommended treatment options. This feature is
           designed to assist farmers in identifying and addressing potential

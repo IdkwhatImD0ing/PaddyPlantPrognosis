@@ -13,32 +13,47 @@ export default function Disease() {
         </h1>
 
         {/* Scientific name will not show up for "normal" paddy plants */}
-        {
-          disease.scientific_name ? 
+        {disease.scientific_name ? (
           <div className="text-[16px]">
-            Scientific Name: <span className="font-bold text-[#537a5a]">{disease.scientific_name}</span>
+            Scientific Name:{' '}
+            <span className="font-bold text-[#537a5a]">
+              {disease.scientific_name}
+            </span>
           </div>
-          :
+        ) : (
           <></>
-        }
+        )}
 
-        <img src={`/sample-paddies/${id}.jpg`} alt={`${id}.jpg`} className="w-[20rem] mt-6 rounded-xl" />
+        <img
+          src={
+            localStorage.getItem('uploaded') === 'true'
+              ? localStorage.getItem('userImage')
+              : `/sample-paddies/${id}.jpg`
+          }
+          className="w-[20rem] mt-6 rounded-xl"
+        />
 
         <div className="flex flex-col justify-center max-w-[50rem]">
           <div className="mt-[2rem]">
-            <p className='text-[18px] text-[#43b348] font-medium'>What happens?</p>
+            <p className="text-[18px] text-[#43b348] font-medium">
+              What happens?
+            </p>
             <div className="text-[32px] font-bold font-serif">Symptoms: </div>
             <div className="text-[#666e75] mt-[1rem]">{disease.symptoms}</div>
           </div>
 
           <div className="mt-[2rem]">
-            <p className='text-[18px] text-[#43b348] font-medium'>What are the causes?</p>
+            <p className="text-[18px] text-[#43b348] font-medium">
+              What are the causes?
+            </p>
             <div className="text-[32px] font-bold font-serif">Cause: </div>
             <div className="text-[#666e75] mt-[1rem]">{disease.cause}</div>
           </div>
-          
+
           <div className="mt-[2rem]">
-            <p className='text-[18px] text-[#43b348] font-medium'>How do you prevent this disease?</p>
+            <p className="text-[18px] text-[#43b348] font-medium">
+              How do you prevent this disease?
+            </p>
             <div className="text-[32px] font-bold font-serif">Prevention:</div>
             <ul className="ml-[2rem] mt-[1rem]">
               {disease.prevention.map((prevention, index) => (
@@ -48,7 +63,6 @@ export default function Disease() {
               ))}
             </ul>
           </div>
-          
         </div>
       </div>
     </div>

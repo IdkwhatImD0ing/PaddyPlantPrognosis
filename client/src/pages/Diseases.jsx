@@ -1,10 +1,15 @@
 import Data from './data.json';
 import DiseaseCard from '../components/DiseaseCard';
 import {useSpring, animated, useTrail} from '@react-spring/web';
+import {useEffect} from 'react';
 
 const Diseases = () => {
   const pages = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const config = {mass: 20, tension: 2000, friction: 500};
+
+  useEffect(() => {
+    localStorage.setItem('uploaded', false);
+  }, []);
 
   const trail = useTrail(pages.length, {
     from: {opacity: 0, transform: 'translateY(-50px)'},

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useSpring, animated} from '@react-spring/web';
+import {CircularProgress, Stack} from '@mui/material';
 
 const Diagnose = () => {
   // STATES
@@ -31,6 +32,11 @@ const Diagnose = () => {
   });
 
   // EFFECTS
+
+  useEffect(() => {
+    localStorage.setItem('uploaded', false);
+  }, []);
+
   useEffect(() => {
     if (image) {
       const reader = new FileReader();
@@ -111,6 +117,7 @@ const Diagnose = () => {
           const file = new File([blob], 'image.jpg', {type: 'image/jpeg'});
           setImage(file);
           localStorage.setItem('userImage', URL.createObjectURL(file));
+          localStorage.setItem('uploaded', true);
         },
         'image/jpeg',
         1,
@@ -124,6 +131,7 @@ const Diagnose = () => {
       // Resize the image to 300x300
       setImage(e.target.files[0]);
       localStorage.setItem('userImage', URL.createObjectURL(e.target.files[0]));
+      localStorage.setItem('uploaded', true);
     }
   };
 
@@ -187,14 +195,23 @@ const Diagnose = () => {
             />
           )}
         </animated.div>
-        <animated.div style={fadeLeft3}>
-          <button
-            type="submit"
-            className="transition ease-in-out duration-100 mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
-          >
-            Upload
-          </button>
-        </animated.div>
+        <Stack
+          direction="row"
+          spacing={4}
+          alignItems="center"
+          alignContent="center"
+          justifyItems="center"
+        >
+          <animated.div style={fadeLeft3}>
+            <button
+              type="submit"
+              className="transition ease-in-out duration-100 mt-12 hover:bg-[#b8e4bb] bg-[#9ae19f] w-[6rem] px-4 py-2 rounded-md"
+            >
+              Upload
+            </button>
+          </animated.div>
+          {loading && <CircularProgress color="success" />}
+        </Stack>
       </form>
     </div>
   );

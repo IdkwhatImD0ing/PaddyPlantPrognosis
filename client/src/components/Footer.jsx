@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom"
-import GitHub from "../assets/github.png"
-import logo from "../assets/logo-2.svg"
-
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 w-full text-[#9ae19f] bg-[#474A48] h-[5rem] flex items-center justify-center gap-28 px-10">
-        <Link to="/"><img className="w-[7rem]" src={logo}/></Link>
-        <Link to="/resources">Resources</Link>
-        <Link to="/about" className="">About</Link>
-        <a href="https://github.com/IdkwhatImD0ing/PaddyPlantPrognosis">
-            GitHub
-        </a> 
-    </footer>
+    <div className="w-full text-[#9ae19f] bg-[#2c302e] h-[5rem] flex items-center justify-center space-x-2">
+        <p className="">
+          &copy; {new Date().getFullYear()} PaddyPlantPrognosis
+        </p>
+        <p>
+          |
+        </p>
+        <a 
+          href="https://github.com/IdkwhatImD0ing/PaddyPlantPrognosis"
+          className="text-white hover:text-[#56c75c] font-semibold"
+        >
+          Source Code
+        </a>
+    </div>
   )
 }
 

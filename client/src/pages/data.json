@@ -113,20 +113,6 @@
     ],
     "cause": "Rice Hispa is caused by the insect Scirpophaga incertulas, which is a small, slender, and yellowish-white worm that feeds on the stem and leaves of the rice plant, primarily attacking the young plants during the vegetative stage. It's considered a major pest, as it can cause significant yield loss and even complete crop failure in some cases."
   },
-  "8": {
-    "name": "Tungro",
-    "scientific_name": "Tospovirus genus and Bacilliformvirus genus",
-    "symptoms": "The symptoms of tungro rice disease include yellowing of leaves, stunted growth, reduced yield, rolling of leaves, small and empty grains, leaf sheath rot, and plant death in some severe cases.",
-    "prevention": [
-      "Plant rice varieties that are resistant to the viruses",
-      "Use insecticides, natural predators, or sticky traps to control the vector",
-      "Tungro can survive in the soil for long periods, so rotating rice with other crops can reduce the risk of infection.",
-      "Remove and destroy infected plants and weeds, as they may harbor the viruses that cause Tungro",
-      "Regularly monitoring the crop for the presence of Tungro symptoms, and taking control measures as soon as the disease is detected",
-      "Using a combination of the above methods in an integrated approach, known as Integrated Pest Management (IPM), can be the most effective way to prevent Tungro"
-    ],
-    "cause": "Tungro is a rice disease caused by two different viruses, the Rice tungro spherical virus (RTSV) and the Rice tungro bacilliform virus (RTBV). The scientific name for RTSV is Tospovirus genus and for RTBV is Bacilliformvirus genus. Both of these viruses are transmitted by the small brown planthopper (Laodelphax striatellus) and are considered to be the most serious rice diseases in Asia."
-  },
   "9": {
     "name": "Normal",
     "scientific_name": null,
@@ -143,5 +129,19 @@
       "Crop rotation: Alternate rice with other crops to help maintain soil fertility and reduce pest and disease pressure"
     ],
     "cause": "It's important to note that growing healthy rice paddy is a continuous process, and farmers should continuously adapt their management strategies based on the local conditions, weather and other factors."
+  },
+  "8": {
+    "name": "Tungro",
+    "scientific_name": "Tospovirus genus and Bacilliformvirus genus",
+    "symptoms": "The symptoms of tungro rice disease include yellowing of leaves, stunted growth, reduced yield, rolling of leaves, small and empty grains, leaf sheath rot, and plant death in some severe cases.",
+    "prevention": [
+      "Plant rice varieties that are resistant to the viruses",
+      "Use insecticides, natural predators, or sticky traps to control the vector",
+      "Tungro can survive in the soil for long periods, so rotating rice with other crops can reduce the risk of infection.",
+      "Remove and destroy infected plants and weeds, as they may harbor the viruses that cause Tungro",
+      "Regularly monitoring the crop for the presence of Tungro symptoms, and taking control measures as soon as the disease is detected",
+      "Using a combination of the above methods in an integrated approach, known as Integrated Pest Management (IPM), can be the most effective way to prevent Tungro"
+    ],
+    "cause": "Tungro is a rice disease caused by two different viruses, the Rice tungro spherical virus (RTSV) and the Rice tungro bacilliform virus (RTBV). The scientific name for RTSV is Tospovirus genus and for RTBV is Bacilliformvirus genus. Both of these viruses are transmitted by the small brown planthopper (Laodelphax striatellus) and are considered to be the most serious rice diseases in Asia."
   }
 }

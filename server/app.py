@@ -12,7 +12,7 @@ inferrer = Inferrer()
 
 @app.route("/")
 def welcome():
-    return "<p>Welcome to this flask backend!</p>"
+    return "<p>Welcome to the paddy plant backend!</p>"
 
 @app.route("/predict", methods=["POST"])
 def predict():

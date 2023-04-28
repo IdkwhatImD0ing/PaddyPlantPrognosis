@@ -1,90 +1,90 @@
-import {useState, useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
-import {useSpring, animated} from '@react-spring/web';
-import {CircularProgress, Stack} from '@mui/material';
+import {useState, useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
+import {useSpring, animated} from '@react-spring/web'
+import {CircularProgress, Stack} from '@mui/material'
 
 const Diagnose = () => {
   // STATES
-  const [select, setSelect] = useState('none'); // State for the sample image select value
-  const [image, setImage] = useState(null); // State for user uploaded image
-  const [imageData, setImageData] = useState(null); // State for user uploaded image
-  const [loading, setLoading] = useState(false); // State for loading
-  const navigate = useNavigate();
+  const [select, setSelect] = useState('none') // State for the sample image select value
+  const [image, setImage] = useState(null) // State for user uploaded image
+  const [imageData, setImageData] = useState(null) // State for user uploaded image
+  const [loading, setLoading] = useState(false) // State for loading
+  const navigate = useNavigate()
 
   const fadeLeft = useSpring({
     from: {opacity: 0, transform: 'translateX(-100px)'},
     to: {opacity: 1, transform: 'translateX(0px)'},
     config: {duration: 500},
-  });
+  })
 
   const fadeLeft2 = useSpring({
     from: {opacity: 0, transform: 'translateX(-100px)'},
     to: {opacity: 1, transform: 'translateX(0px)'},
     config: {duration: 500},
     delay: 500,
-  });
+  })
 
   const fadeLeft3 = useSpring({
     from: {opacity: 0, transform: 'translateX(-100px)'},
     to: {opacity: 1, transform: 'translateX(0px)'},
     config: {duration: 500},
     delay: 1000,
-  });
+  })
 
   // EFFECTS
 
   useEffect(() => {
-    localStorage.setItem('uploaded', false);
-  }, []);
+    localStorage.setItem('uploaded', false)
+  }, [])
 
   useEffect(() => {
     if (image) {
-      const reader = new FileReader();
+      const reader = new FileReader()
       reader.onload = (e) => {
-        const img = new Image();
-        img.src = e.target.result;
+        const img = new Image()
+        img.src = e.target.result
         img.onload = () => {
-          const canvas = document.createElement('canvas');
-          canvas.width = 256;
-          canvas.height = 256;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 256, 256);
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          setImageData(imageData);
-        };
-      };
-      reader.readAsDataURL(image);
+          const canvas = document.createElement('canvas')
+          canvas.width = 256
+          canvas.height = 256
+          const ctx = canvas.getContext('2d')
+          ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, 256, 256)
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+          setImageData(imageData)
+        }
+      }
+      reader.readAsDataURL(image)
     }
-  }, [image]); // Activates every time image is updated
+  }, [image]) // Activates every time image is updated
 
   // FUNCTIONS
 
   // Sends a POST request to the server
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     // Alerts user if no image is selected
     if (!image) {
-      alert('Please submit a valid image.');
-      return;
+      alert('Please submit a valid image.')
+      return
     }
 
-    const data = imageData.data;
-    const length = imageData.height;
-    const width = imageData.width;
-    const imageArray = new Array(length);
+    const data = imageData.data
+    const length = imageData.height
+    const width = imageData.width
+    const imageArray = new Array(length)
     for (let i = 0; i < length; i++) {
-      imageArray[i] = new Array(width);
+      imageArray[i] = new Array(width)
       for (let j = 0; j < width; j++) {
-        const red = data[(i * width + j) * 4];
-        const green = data[(i * width + j) * 4 + 1];
-        const blue = data[(i * width + j) * 4 + 2];
-        imageArray[i][j] = [red, green, blue];
+        const red = data[(i * width + j) * 4]
+        const green = data[(i * width + j) * 4 + 1]
+        const blue = data[(i * width + j) * 4 + 2]
+        imageArray[i][j] = [red, green, blue]
       }
     }
-    setLoading(true);
+    setLoading(true)
 
-    fetch('https://paddydoctor.hop.sh/predict', {
+    fetch('https://api.art3m1s.me/paddy/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -95,45 +95,45 @@ const Diagnose = () => {
         (response) => response.json(), // if the response is a JSON object
       )
       .then((data) => {
-        setLoading(false);
-        navigate('/diseases/' + data[0]);
-      });
-  };
+        setLoading(false)
+        navigate('/diseases/' + data[0])
+      })
+  }
 
   // Updates the image state every time the select input changes
   const updateSelect = (e) => {
-    setSelect(e.target.value);
+    setSelect(e.target.value)
 
-    const img = new Image();
-    img.src = `/sample-paddies/${e.target.value}.jpg`;
+    const img = new Image()
+    img.src = `/sample-paddies/${e.target.value}.jpg`
     img.onload = () => {
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      canvas.height = img.height;
-      canvas.width = img.width;
-      ctx.drawImage(img, 0, 0);
+      const canvas = document.createElement('canvas')
+      const ctx = canvas.getContext('2d')
+      canvas.height = img.height
+      canvas.width = img.width
+      ctx.drawImage(img, 0, 0)
       canvas.toBlob(
         (blob) => {
-          const file = new File([blob], 'image.jpg', {type: 'image/jpeg'});
-          setImage(file);
-          localStorage.setItem('userImage', URL.createObjectURL(file));
-          localStorage.setItem('uploaded', true);
+          const file = new File([blob], 'image.jpg', {type: 'image/jpeg'})
+          setImage(file)
+          localStorage.setItem('userImage', URL.createObjectURL(file))
+          localStorage.setItem('uploaded', true)
         },
         'image/jpeg',
         1,
-      );
-    };
-  };
+      )
+    }
+  }
 
   // Updates the image state every time the user uploads an image
   const updateUserImage = (e) => {
     if (e.target.files[0]) {
       // Resize the image to 300x300
-      setImage(e.target.files[0]);
-      localStorage.setItem('userImage', URL.createObjectURL(e.target.files[0]));
-      localStorage.setItem('uploaded', true);
+      setImage(e.target.files[0])
+      localStorage.setItem('userImage', URL.createObjectURL(e.target.files[0]))
+      localStorage.setItem('uploaded', true)
     }
-  };
+  }
 
   return (
     <div className="flex justify-center text-[#2c302e] mb-[5rem]">
@@ -214,7 +214,7 @@ const Diagnose = () => {
         </Stack>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default Diagnose;
+export default Diagnose
